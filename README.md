@@ -5,6 +5,5 @@
 * MongoDB
 * Pug
   
-- Image Website
-
+Image Website
 ![Website](Screenshot.jpeg)
