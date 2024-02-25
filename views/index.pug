@@ -1,0 +1,84 @@
+extends common/layout
+
+block layout-content 
+  section.features
+    h1 Featured Destinations
+    .container
+      .row
+        each package in tour
+          .col-md-4
+            .feature-box
+              .feature-img
+                img(src= package.image)
+                .price
+                  p #{package.price}$
+                .rating
+                  i.fa-solid.fa-star
+                  i.fa-solid.fa-star
+                  i.fa-solid.fa-star
+                  i.fa-solid.fa-star-half-stroke
+                  i.fa-regular.fa-star
+              .feature-details
+                h4 #{package.city}
+                p #{package.info}
+                div
+                  span
+                    i.fa-solid.fa-location-dot
+                    | #{package.city}
+                  span
+                    i.fa-regular.fa-sun
+                    | #{package.duration} Days
+                  span
+                    i.fa-regular.fa-moon
+                    | #{package.duration-1} Nights
+  section.gallery
+    h1 Travelling Gallery
+    .container
+      .row
+        .col-md-3
+          .gallery-box
+            img(src='images/travel-1.jpg')
+            h4 Los Angeles
+        .col-md-3
+          .gallery-box
+            img(src='images/travel-2.jpg')
+            h4 Los Angeles
+        .col-md-3
+          .gallery-box
+            img(src='images/travel-3.jpg')
+            h4 Los Angeles
+        .col-md-3
+          .gallery-box
+            img(src='images/travel-4.jpg')
+            h4 Los Angeles
+  section.banner
+    .banner-highlights
+      .container
+        .row
+          .col-md-8
+            h2 Get 30% on top destination
+            p Book your tickets before 31st March and avail 30% flat discount.
+          .col-md-4
+            button.booking-btn(type='button') Book Now
+  section.user-feedback
+    h1 Users Rewiw
+    .container
+    .row
+      .col-md-4
+        .user-review
+          p Oh, the places you will go!
+          h5 Abbas Vaziri
+          small Los Angeles
+        img(src='images/user1.jpg')
+      .col-md-4
+        .user-review
+          p Investment in travel is an investment in yourself.
+          h5 John Doil
+          small Los Angeles
+        img(src='images/user2.jpg')
+      .col-md-4
+        .user-review
+          p Better to see something once than hear about it a thousand times.
+          h5 Sarah Bittle
+          small Los Angeles
+        img(src='images/user3.jpg')

@@ -1,0 +1,20 @@
+header.header
+  nav.navbar.navbar-expand-sm.navbar-dark.sticky-top
+    a.navbar-brand(href='#')
+      img(src='../../images/triptok.png' alt='Avatar Logo')
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#mynavbar')
+      span.navbar-toggler-icon
+    #mynavbar.collapse.navbar-collapse
+      ul.navbar-nav.me-auto
+        li.nav-item
+          a.nav-link(href='../') Home
+        li.nav-item
+          a.nav-link(href='#') About Us
+        li.nav-item
+          a.nav-link(href='#') Contact Us
+      form.d-flex
+        input.form-control.me-2(type='text' placeholder='Search')
+        button.btn.btn-primary.pl-5(type='button') Search
+  .card-body
+    h1.card-title Travel Across The Globe
+    p.card-text A journey of a thousand miles begins with a single step.

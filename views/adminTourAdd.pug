@@ -1,0 +1,24 @@
+extends common/layout
+
+block layout-content
+  .container
+  h1 Add Tour Package (Admin)
+  form.tour-form(method="post" action="/admin/tour/add/submit")
+    div
+      label(for='city') City:
+      input#city(type='text' name='city' required='')
+    div
+      label(for='duration') Duration:
+      input#day(type='number' min='0' name='duration' required='')
+    div
+      label(for='href') Image:
+      input#href(type='text' name='image' required='')
+    div
+      label(for='info') Info:
+      input#info(type='text' name='info' required='')
+    div
+      label(for='price') Price:
+      input#price(type='number' min='0' name='price' required='')
+    button#add-btn(type='submit') Add Tour
+
+      

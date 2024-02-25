@@ -1,0 +1,31 @@
+extends common/layout
+
+block layout-content
+  .container
+  h1 Admin Page
+  table
+    tr
+      th City
+      th Duration
+      th(style='text-align: center;') Image
+      th Info 
+      th Price
+      th(colspan='2' style='text-align: center;') Actions
+      // Data rows will be dynamically added here
+    each package in tour
+      tr
+        td(style='width:10%') #{package.city}
+        td #{package.duration}
+        td #{package.image}
+        td #{package.info}
+        td #{package.price}$
+        td
+          form(action="/admin/tour/edit")
+            input(type="hidden" name="packageId" value=package._id)
+            button.edit-btn(type='submit') Edit
+        td
+          form(action="/admin/tour/delete")
+            input(type="hidden" name="packageId" value=package._id)
+            button.delete-btn(type='submit') Delete
+  form(action="/admin/tour/add")
+    button#add-btn(type='submit') Add Package

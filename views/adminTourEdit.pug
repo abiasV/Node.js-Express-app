@@ -1,0 +1,23 @@
+extends common/layout
+
+block layout-content
+  .container
+    h1 Edit Tour Package (Admin)
+    form.tour-form(method="post" action="/admin/tour/edit/submit")
+      input(type="hidden" name="packageId" value=editPackage._id)
+      div
+        label(for='city') City:
+        input#city(type='text' name="city" value=editPackage.city)
+      div
+        label(for='duration') Duration:
+        input#day(type='number' min='0' name="duration" value=editPackage.duration)
+      div
+        label(for='href') Image:
+        input#href(type='text' name="image" value=editPackage.image)
+      div
+        label(for='info') Info:
+        input#info(type='text' name="info" value=editPackage.info)
+      div
+        label(for='price') Price:
+        input#price(type='number' min='0' name="price" value=editPackage.price)
+      button#add-btn(type='submit') Update Tour

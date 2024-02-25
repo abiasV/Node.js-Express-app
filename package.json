@@ -1,0 +1,21 @@
+{
+  "name": "assignment01",
+  "version": "1.0.0",
+  "description": "Project01, Nodejs+Bootstrapp",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "author": "Abbas Vaziri",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  }
+}
